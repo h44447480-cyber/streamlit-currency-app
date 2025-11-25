@@ -8,7 +8,7 @@ st.title("🔐 Secure Currency Converter")
 password = st.text_input("Enter Password:", type="password")
 
 # Apna password yahan set karein
-correct_password = "1234$"
+correct_password = st.secrets["APP_PASSWORD"]
 
 if password != correct_password:
     st.warning("Please enter the correct password to access the converter.")
@@ -38,7 +38,7 @@ if st.button("Convert"):
         st.error("Failed To Fetch Conversion Rate")
 
 # AI ChatBot
-client = Groq(api_key = "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")
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # ==== Sidebar Chatbot ====
 st.sidebar.subheader("🧠 AI Chatbot (Animated Robot)")
@@ -59,5 +59,6 @@ if st.sidebar.button("Send"):
         # Display user and bot messages
         st.sidebar.write("🧑‍💻 You: " + user_msg)
         st.sidebar.write("🤖 Bot: " + bot_reply)
+
 
 

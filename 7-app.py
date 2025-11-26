@@ -59,17 +59,3 @@ if st.sidebar.button("Send"):
         # Display user and bot messages
         st.sidebar.write("🧑‍💻 You: " + user_msg)
         st.sidebar.write("🤖 Bot: " + bot_reply)
-
-
-st.markdown("""
-<style>
-.st-emotion-cache-q16mip.ekuhni81       # for remove hamburger
-{
-        visibility : hidden;
-}
-</style>
-""" , unsafe_allow_html = True) 
-
-
-
-

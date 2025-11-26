@@ -61,4 +61,15 @@ if st.sidebar.button("Send"):
         st.sidebar.write("🤖 Bot: " + bot_reply)
 
 
+st.markdown("""
+<style>
+.st-emotion-cache-q16mip.ekuhni81       # for remove hamburger
+{
+        visibility : hidden;
+}
+</style>
+""" , unsafe_allow_html = True) 
+
+
+
 
